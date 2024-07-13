@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 요소 예시(240713)</title>
+</head>
+<body>
+    <h1>HTML 요소 예시</h1>
+    <!-- head 요소: 문서의 메타데이터를 포함하는 컨테이너 -->
+    <head>
+        <title>HTML 요소 예시</title> <!-- title 요소: 문서의 제목을 정의 -->
+    </head>
+    <!-- body 요소: 문서의 본문을 나타냄 -->
+    <body>
+        <!-- header 요소: 소개 및 탐색 링크를 포함하는 문서나 섹션의 머리말 -->
+        <header>
+            <h2>헤더 예시</h2>
+            <nav>
+                <!-- nav 요소: 내비게이션 링크를 정의 -->
+                <ul>
+                    <li><a href="#section1">섹션 1</a></li>
+                    <li><a href="#section2">섹션 2</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- article 요소: 독립적인 콘텐츠 영역 -->
+        <article>
+            <h3>아티클 예시</h3>
+            <p>이것은 <strong>article</strong> 요소의 예시입니다.</p>
+        </article>
+
+        <!-- section 요소: 문서의 일반적인 섹션을 정의 -->
+        <section id="section1">
+            <h3>섹션 1 예시</h3>
+            <p>이것은 <strong>section</strong> 요소의 예시입니다.</p>
+        </section>
+
+        <!-- p 요소: 단락을 정의 -->
+        <p>이것은 <strong>p</strong> 요소의 예시입니다.</p>
+
+        <!-- div 요소: 스타일링이나 스크립트용 컨테이너 -->
+        <div>
+            <p>이것은 <strong>div</strong> 요소의 예시입니다.</p>
+        </div>
+
+        <!-- span 요소: 인라인 컨테이너 -->
+        <p>이것은 <span>span</span> 요소의 예시입니다.</p>
+
+        <!-- img 요소: 이미지를 임베드 -->
+        <img src="https://via.placeholder.com/150" alt="예시 이미지">
+
+        <!-- aside 요소: 주요 콘텐츠와 별개인 콘텐츠 -->
+        <aside>
+            <p>이것은 <strong>aside</strong> 요소의 예시입니다.</p>
+        </aside>
+
+        <!-- audio 요소: 오디오 콘텐츠를 임베드 -->
+        <audio controls>
+            <source src="audio_file.mp3" type="audio/mp3">
+            브라우저가 audio 요소를 지원하지 않습니다.
+        </audio>
+
+        <!-- canvas 요소: 그래픽을 위한 컨테이너 -->
+        <canvas id="myCanvas" width="200" height="200" style="border:1px solid #000000;">
+            브라우저가 canvas 요소를 지원하지 않습니다.
+        </canvas>
+
+        <!-- datalist 요소: 입력 컨트롤을 위한 옵션 목록을 정의 -->
+        <label for="browser">브라우저:</label>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+        </datalist>
+
+        <!-- details 요소: 추가 세부 정보를 제공합니다 -->
+        <details>
+            <summary>세부 정보</summary>
+            <p>이것은 <strong>details</strong> 요소의 예시입니다.</p>
+        </details>
+
+        <!-- embed 요소: 외부 콘텐츠를 포함 -->
+        <embed src="https://www.example.com" width="300" height="200">
+
+        <!-- nav 요소: 내비게이션 링크를 정의 -->
+        <nav>
+            <p>이것은 <strong>nav</strong> 요소의 예시입니다.</p>
+        </nav>
+
+        <!-- output 요소: 계산 또는 사용자 입력의 결과를 나타냄 -->
+        <output name="result" for="a b">42</output>
+
+        <!-- progress 요소: 작업의 진행 상황을 나타냄 -->
+        <progress value="70" max="100">70%</progress>
+
+        <!-- video 요소: 비디오 콘텐츠를 임베드 -->
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            브라우저가 video 요소를 지원하지 않습니다.
+        </video>
+
+        <!-- ul 요소: 순서가 없는 목록을 정의 -->
+        <ul>
+            <li>항목 1</li>
+            <li>항목 2</li>
+            <li>항목 3</li>
+        </ul>
+
+        <!-- ol 요소: 순서가 있는 목록을 정의 -->
+        <ol>
+            <li>첫 번째 항목</li>
+            <li>두 번째 항목</li>
+            <li>세 번째 항목</li>
+        </ol>
+
+        <!-- li 요소: 목록 항목을 정의 -->
+        <ul>
+            <li>첫 번째 항목</li>
+            <li>두 번째 항목</li>
+            <li>세 번째 항목</li>
+        </ul>
+    </body>
+
+    <!-- footer 요소: 문서나 섹션의 바닥글 -->
+    <footer>
+        <p>이것은 <strong>footer</strong> 요소의 예시입니다.</p>
+    </footer>
+</body>
+</html>
