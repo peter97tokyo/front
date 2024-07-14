@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기초 CSS(240714)</title>
+</head>
+    <style>
+        p {
+            /* 태그 선택자: 태그 이름으로 요소를 선택합니다. */
+            color: blue;
+        }
+        .example {
+            /* 클래스 선택자: 클래스 이름으로 요소를 선택합니다. 클래스 이름 앞에 .을 붙입니다. */
+            color: red;
+        }
+        #unique {
+            /* 아이디 선택자: 아이디 이름으로 요소를 선택합니다. 아이디 이름 앞에 #을 붙입니다. */
+            color: green;
+        }
+        div p {
+            /* 자손 선택자: 특정 요소의 모든 자손 요소를 선택합니다. */
+            color: pink;
+        }
+        div > div {
+            /* 자식 선택자: 특정 요소의 직계 자식을 선택합니다. */
+            color: hotpink;
+        }
+        h1 + p {
+            /* 인접 형제 선택자: 특정 요소의 다음에 오는 형제 요소를 선택합니다. */
+            color: darkblue;
+        }
+        h1 ~ span {
+            /* 일반 형제 선택자: 특정 요소의 모든 형제 요소를 선택합니다. */
+            color: darkred;
+        }
+        a:hover {
+            /* 의사 클래스: 특정 상태의 요소를 선택합니다. */
+            color: orange;
+        }
+        p::first-line {
+            /* 의사 요소: 요소의 특정 부분을 선택합니다. */
+            font-weight: bold;
+        }
+        
+    </style>
+<body>
+    <p>CSS (Cascading Style Sheets)는 웹페이지를 꾸미려고 작성하는 코드입니다</p>
+    <p class="example">HTML와 같이 CSS는 실제로 프로그래밍 언어는 아닙니다. 마크업(markup) 언어 도 아닙니다.</p>
+    <p id="unique">Style sheet 언어 입니다. HTML 문서에 있는 요소들에 선택적으로 스타일을 적용할 수 있다는 말입니다.</p>
+    <hr>
+    <div>
+        <p>자손 선택자: 특정 요소의 모든 자손 요소를 선택합니다.</p>
+    </div>
+    <div>
+        <div>자식 선택자: 특정 요소의 직계 자식을 선택합니다.</div>
+    </div>
+    <h1>인접 형제 선택자: </h1><p>특정 요소의 다음에 오는 형제 요소를 선택합니다.</p><p>특정 요소의 2번째 오는 요소는 적용 X</p>
+    <h1>인접 형제 선택자: </h1><span>특정 요소의 다음에 오는 형제 요소를 선택합니다.</span><span> 특정 요소의 2번째 오는 요소도 적용 OK</span>
+    <hr>
+    <a href="https://www.naver.com">네이버</a>
+</body>
+</html>
