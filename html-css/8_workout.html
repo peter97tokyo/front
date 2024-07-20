@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 및 점검</title>
+</head>
+<style>
+    .header{
+        display: flex;
+        /* display: flex; 또는 display: inline-flex;: Flex 컨테이너를 정의합니다. */
+        justify-content: center;
+        /* justify-content: 주 축을 따라 아이템을 정렬합니다. center: 중앙 */
+        align-items: center;
+        /* align-items: 교차 축을 따라 아이템을 정렬합니다. */
+    }
+    .header-in-search{
+        
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .left-block{
+        width: 60%;
+    }
+    .left-contents{
+        padding: 3%;
+    }
+    .right-block{
+        width: 40%;
+    }
+    .right-contents{
+        padding: 3%;
+        
+    }
+    .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .one-line{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        /* 모든 list-style 속성을 이용한 스타일을 한 줄에 설정할 수 있음. */
+    }
+    .one-line > li{
+        margin: 0;
+        padding: 0;
+        float: left;
+        /* CSS 속성(property) float 은 한 요소(element)가 보통 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가 그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치되어야 함을 지정합니다. */
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="header-in-search">
+            <input>
+            <button>검색</button>
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="left-block">
+            <div class="left-contents">왼쪽 블럭</div>
+            <div class="left-contents">왼쪽 블럭1</div>
+            <div class="left-contents">왼쪽 블럭2</div>
+            <div class="left-contents">왼쪽 블럭3</div>
+            <div class="left-contents">왼쪽 블럭4</div>
+        </div>
+
+        <div class="right-block">
+            <div class="right-contents">
+                <a href="#" >로그인하기</a>
+                <ul class="one-line">
+                    <li>아이디 찾기</li>
+                    <li>비밀번호 찾기</li>
+                    <li>회원가입하기</li>
+                </ul>
+            </div>
+            <div class="right-contents">오른쪽 블럭1</div>
+            <div class="right-contents">오른쪽 블럭2</div>
+            <div class="right-contents">오른쪽 블럭3</div>
+            <div class="right-contents">오른쪽 블럭4</div>
+        </div>
+    </div>
+    <footer class="footer">
+        <ul class="one-line">
+            <li>프론트이직</li>
+            <li>이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>용두사미</li>
+            <li>고객센터</li>
+        </ul>
+    </footer>
+</body>
+</html>
