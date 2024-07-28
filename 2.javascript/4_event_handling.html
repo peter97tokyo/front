@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이벤트 처리(240728)</title>
+  <style>
+    #outerDiv {
+      padding: 50px;
+      background-color: lightblue;
+    }
+    #innerDiv {
+      padding: 50px;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Event Handling Examples</h1>
+
+  <!-- 인라인 이벤트 핸들러 -->
+  <h2>1. 인라인 이벤트 핸들러</h2>
+  <button onclick="alert('Button clicked!')">Click me</button>
+
+  <!-- DOM 요소의 이벤트 핸들러 속성 -->
+  <h2>2. DOM 요소의 이벤트 핸들러 속성</h2>
+  <button id="myButton1">Click me</button>
+
+  <!-- addEventListener 메서드 -->
+  <h2>3. addEventListener 메서드</h2>
+  <button id="myButton2">Click me</button>
+
+  <!-- 이벤트 객체 -->
+  <h2>4. 이벤트 객체</h2>
+  <button id="myButton3">Click me</button>
+
+  <!-- 이벤트 전파 (캡처링, 타깃, 버블링) -->
+  <h2>5. 이벤트 전파</h2>
+  <div id="outerDiv">
+    Outer Div
+    <div id="innerDiv">
+      Inner Div
+    </div>
+  </div>
+
+  <!-- 이벤트 전파 제어: stopPropagation -->
+  <h2>6. 이벤트 전파 제어: stopPropagation</h2>
+  <div id="outerDiv2">
+    Outer Div
+    <div id="innerDiv2">
+      Inner Div
+    </div>
+  </div>
+
+  <!-- 기본 이벤트 동작 중단: preventDefault -->
+  <h2>7. 기본 이벤트 동작 중단: preventDefault</h2>
+  <a href="https://www.example.com" id="myLink">Go to Example.com</a>
+
+  <!-- 이벤트 위임 -->
+  <h2>8. 이벤트 위임</h2>
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <script>
+    // 2. DOM 요소의 이벤트 핸들러 속성
+    const button1 = document.getElementById('myButton1');
+    button1.onclick = function() {
+      alert('Button clicked!');
+    };
+
+    // 3. addEventListener 메서드
+    const button2 = document.getElementById('myButton2');
+    button2.addEventListener('click', function() {
+      alert('Button clicked!');
+    });
+
+    // 4. 이벤트 객체
+    const button3 = document.getElementById('myButton3');
+    button3.addEventListener('click', function(event) {
+      alert(`Button clicked at coordinates (${event.clientX}, ${event.clientY})`);
+    });
+
+    // 5. 이벤트 전파
+    const outerDiv = document.getElementById('outerDiv');
+    const innerDiv = document.getElementById('innerDiv');
+
+    outerDiv.addEventListener('click', function() {
+      alert('Outer Div clicked!');
+    });
+
+    innerDiv.addEventListener('click', function() {
+      alert('Inner Div clicked!');
+    });
+
+    // 6. 이벤트 전파 제어: stopPropagation
+    const outerDiv2 = document.getElementById('outerDiv2');
+    const innerDiv2 = document.getElementById('innerDiv2');
+
+    outerDiv2.addEventListener('click', function() {
+      alert('Outer Div clicked!');
+    });
+
+    innerDiv2.addEventListener('click', function(event) {
+      alert('Inner Div clicked!');
+      event.stopPropagation();
+    });
+
+    // 7. 기본 이벤트 동작 중단: preventDefault
+    const link = document.getElementById('myLink');
+    link.addEventListener('click', function(event) {
+      alert('Link clicked!');
+      event.preventDefault();
+    });
+
+    // 8. 이벤트 위임
+    const list = document.getElementById('myList');
+    list.addEventListener('click', function(event) {
+      if (event.target.tagName === 'LI') {
+        alert(`You clicked on ${event.target.textContent}`);
+      }
+    });
+  </script>
+
+</body>
+</html>

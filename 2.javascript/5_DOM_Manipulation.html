@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM 조작</title>
+  <style>
+    #content {
+      margin-top: 20px;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1. 요소 선택 -->
+  <h2>1. 요소 선택</h2>
+  <p id="paragraph">This is a paragraph.</p>
+  <button id="selectButton">Select Paragraph</button>
+
+  <!-- 2. 요소 생성 및 추가 -->
+  <h2>2. 요소 생성 및 추가</h2>
+  <button id="addButton">Add New Paragraph</button>
+  <div id="content"></div>
+
+  <!-- 3. 요소 내용 변경 -->
+  <h2>3. 요소 내용 변경</h2>
+  <button id="changeContentButton">Change Paragraph Content</button>
+
+  <!-- 4. 요소 속성 변경 -->
+  <h2>4. 요소 속성 변경</h2>
+  <button id="changeAttributeButton">Change Image Source</button>
+  <img id="myImage" src="https://via.placeholder.com/150" alt="Placeholder Image">
+
+  <!-- 5. 클래스 추가 및 제거 -->
+  <h2>5. 클래스 추가 및 제거</h2>
+  <button id="toggleClassButton">Toggle Highlight Class</button>
+  <p id="classParagraph">This paragraph can be highlighted.</p>
+
+  <!-- 6. 요소 제거 -->
+  <h2>6. 요소 제거</h2>
+  <button id="removeButton">Remove Paragraph</button>
+  <p id="removeParagraph">This paragraph will be removed.</p>
+
+  <script>
+    // 1. 요소 선택
+    const selectButton = document.getElementById('selectButton');
+    selectButton.addEventListener('click', function() {
+      const paragraph = document.getElementById('paragraph');
+      alert(paragraph.textContent);
+    });
+
+    // 2. 요소 생성 및 추가
+    const addButton = document.getElementById('addButton');
+    addButton.addEventListener('click', function() {
+      const newParagraph = document.createElement('p');
+      newParagraph.textContent = 'This is a new paragraph.';
+      document.getElementById('content').appendChild(newParagraph);
+    });
+
+    // 3. 요소 내용 변경
+    const changeContentButton = document.getElementById('changeContentButton');
+    changeContentButton.addEventListener('click', function() {
+      const paragraph = document.getElementById('paragraph');
+      paragraph.textContent = 'The content has been changed!';
+    });
+
+    // 4. 요소 속성 변경
+    const changeAttributeButton = document.getElementById('changeAttributeButton');
+    changeAttributeButton.addEventListener('click', function() {
+      const image = document.getElementById('myImage');
+      image.src = 'https://via.placeholder.com/300';
+      image.alt = 'Updated Placeholder Image';
+    });
+
+    // 5. 클래스 추가 및 제거
+    const toggleClassButton = document.getElementById('toggleClassButton');
+    toggleClassButton.addEventListener('click', function() {
+      const paragraph = document.getElementById('classParagraph');
+      paragraph.classList.toggle('highlight');
+    });
+
+    // 6. 요소 제거
+    const removeButton = document.getElementById('removeButton');
+    removeButton.addEventListener('click', function() {
+      const paragraph = document.getElementById('removeParagraph');
+      paragraph.remove();
+    });
+  </script>
+
+</body>
+</html>
