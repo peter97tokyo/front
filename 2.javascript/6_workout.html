@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 및 점검</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* 전체 배경색 추가 */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; /* 화면 전체 높이로 조정 */
+        }
+        .items {
+            text-align: center;
+            margin-top: 50px;
+            width: 430px;
+        }
+        .status {
+            font-size: 50px;
+            background-color: #e0e0e0; /* 배경색 추가 */
+            padding: 20px;
+            border-radius: 10px;
+            color: #333; /* 텍스트 색상 */
+        }
+        .buttons > button {
+            font-size: 30px;
+            margin: 20px;
+            width: 100px;
+            background-color: #4caf50; /* 버튼 배경색 */
+            color: white; /* 버튼 텍스트 색상 */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buttons > button:hover {
+            background-color: #45a049; /* 호버시 버튼 배경색 */
+        }
+        @media only screen and (max-width: 480px) {
+            .items {
+                width: 80%;
+            }
+            .status {
+                font-size: 25px;
+                
+            }
+            .buttons{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                
+            }
+            .buttons > button {
+                font-size: 25px;
+                
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="items">
+            <div class="status">결과:
+                <div></div>
+            </div> 
+        </div>
+        <div class="items">
+            <div class="status">컴퓨터:
+                <div></div>
+            </div>
+        </div>
+        <div class="items">
+            <div class="status">나:
+                <div></div>
+            </div>
+            <div class="buttons">
+                <button>가위</button>
+                <button>바위</button>
+                <button>보</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
