@@ -6,14 +6,14 @@
     <title>연습 및 점검</title>
     <style>
         body {
-            background-color: #f0f8ff; /* 전체 배경색 추가 */
+            background-color: #f0f8ff;
         }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 100vh; /* 화면 전체 높이로 조정 */
+            height: 100vh; 
         }
         .items {
             text-align: center;
@@ -22,24 +22,24 @@
         }
         .status {
             font-size: 50px;
-            background-color: #e0e0e0; /* 배경색 추가 */
+            background-color: #e0e0e0;
             padding: 20px;
             border-radius: 10px;
-            color: #333; /* 텍스트 색상 */
+            color: #333;
         }
         .buttons > button {
             font-size: 30px;
             margin: 20px;
             width: 100px;
-            background-color: #4caf50; /* 버튼 배경색 */
-            color: white; /* 버튼 텍스트 색상 */
+            background-color: #4caf50; 
+            color: white;
             border: none;
             border-radius: 10px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
         .buttons > button:hover {
-            background-color: #45a049; /* 호버시 버튼 배경색 */
+            background-color: #45a049; 
         }
         @media only screen and (max-width: 480px) {
             .items {
@@ -47,18 +47,15 @@
             }
             .status {
                 font-size: 25px;
-                
             }
-            .buttons{
+            .buttons {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                
             }
             .buttons > button {
                 font-size: 25px;
-                
                 width: 80%;
             }
         }
@@ -68,24 +65,49 @@
     <div class="container"> 
         <div class="items">
             <div class="status">결과:
-                <div></div>
+                <div id="result"></div>
             </div> 
         </div>
         <div class="items">
             <div class="status">컴퓨터:
-                <div></div>
+                <div id="computer-choice"></div>
             </div>
         </div>
         <div class="items">
             <div class="status">나:
-                <div></div>
+                <div id="player-choice"></div>
             </div>
             <div class="buttons">
-                <button>가위</button>
-                <button>바위</button>
-                <button>보</button>
+                <button onclick="playGame('가위')">가위</button>
+                <button onclick="playGame('바위')">바위</button>
+                <button onclick="playGame('보')">보</button>
             </div>
         </div>
     </div>
+    <script>
+        function playGame(playerChoice) {
+            const choices = ['가위', '바위', '보'];
+            const computerChoice = choices[Math.floor(Math.random() * 3)];
+            
+            document.getElementById('player-choice').innerText = playerChoice;
+            document.getElementById('computer-choice').innerText = computerChoice;
+            
+            let result = '';
+            
+            if (playerChoice === computerChoice) {
+                result = '무승부';
+            } else if (
+                (playerChoice === '가위' && computerChoice === '보') ||
+                (playerChoice === '바위' && computerChoice === '가위') ||
+                (playerChoice === '보' && computerChoice === '바위')
+            ) {
+                result = '승리';
+            } else {
+                result = '패배';
+            }
+            
+            document.getElementById('result').innerText = result;
+        }
+    </script>
 </body>
 </html>
