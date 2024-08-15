@@ -15,18 +15,19 @@ const App = () => {
   return (
     <Router>
       {/* <Router>: 애플리케이션 전체를 감싸는 컴포넌트입니다. */}
+      <h1>3.라우팅</h1>
       <nav>
         {/* <nav>: 내비게이션 링크를 포함하는 메뉴입니다. */}
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            기본 라우팅: <Link to="/">Home</Link>
             {/* <Link>: 다른 페이지로 이동하기 위한 링크를 생성합니다. */}
           </li>
           <li>
-            <Link to="/about">About</Link>
+            기본 라우팅: <Link to="/about">About</Link>
           </li>
           <li>
-            <Link to="/user/peterKim">peterKim</Link>
+            동적 라우팅: <Link to="/user/peterKim">peterKim</Link>
           </li>
         </ul>
       </nav>
